@@ -1,34 +1,19 @@
 {
   "compilerOptions": {
-    "declaration": true,
-    "esModuleInterop": true,
-    "noImplicitAny": false,
-    "preserveConstEnums": true,
-    "removeComments": true,
-    "sourceMap": true,
-    "allowSyntheticDefaultImports": true,
-    "allowJs": true,
+    "target": "ESNext",
+    "module": "CommonJS",
     "strict": true,
-
-    "outDir": "./dist",
-    "target": "es5",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "jsx": "react-jsx",
-
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "esModuleInterop": true,
     "skipLibCheck": true,
-
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "outDir": "dist",
     "baseUrl": ".",
-    "plugins": [
-      // Transform paths in output .js files
-      //{ "transform": "typescript-transform-paths" },
-
-      // Transform paths in output .d.ts files (Include this line if you output declarations files)
-      { "transform": "typescript-transform-paths", "afterDeclarations": true }
-    ],
-    "paths": { "*": ["./src/*"] }
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
-  "include": ["./src/**/*"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
 }
