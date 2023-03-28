@@ -1,7 +1,7 @@
 {
-  "name": "npnxt",
+  "name": "np-nt",
   "version": "0.0.1",
-  "repository": "https://github.com/nine-pie-pie/npnxt.git",
+  "repository": "https://github.com/nine-pie-pie/np-nt.git",
   "author": "xucong <xuerzong@gmail.com>",
   "license": "MIT",
   "main": "dist/index.js",

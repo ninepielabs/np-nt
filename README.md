@@ -1,10 +1,10 @@
-# npnxt
+# np-nt
 
-npnxt(nine pie next tools), which is a collection of tools for Next.js app.
+np-nt is a collection of tools for Next.js app.
 
 ## Usage
 ```
-yarn add npnxt
+yarn add np-nt
 ```
 
 ## LICENSE
