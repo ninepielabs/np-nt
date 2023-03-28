@@ -1,5 +1,5 @@
 import type { NextApiResponse } from 'next'
-import { HttpStatus } from '@/constants/http';
+import { HttpStatus } from '../constants/http'
 
 export function ok(response: NextApiResponse, data: object = {}) {
   return response.status(HttpStatus.OK).json(data)
@@ -30,9 +30,13 @@ export function conflict(response: NextApiResponse, data: object = {}) {
 }
 
 export function methodNotAllowed(response: NextApiResponse) {
-  return response.status(HttpStatus.METHOD_NOT_ALLOWED).send(HttpStatus[HttpStatus.METHOD_NOT_ALLOWED]);
+  return response
+    .status(HttpStatus.METHOD_NOT_ALLOWED)
+    .send(HttpStatus[HttpStatus.METHOD_NOT_ALLOWED])
 }
 
 export function serverError(response: NextApiResponse) {
-  return response.status(HttpStatus.INTERNAL_SERVER_ERROR).send(HttpStatus[HttpStatus.INTERNAL_SERVER_ERROR])
+  return response
+    .status(HttpStatus.INTERNAL_SERVER_ERROR)
+    .send(HttpStatus[HttpStatus.INTERNAL_SERVER_ERROR])
 }
