@@ -1,0 +1,59 @@
+{
+  "name": "np-nt",
+  "version": "0.0.1",
+  "repository": "https://github.com/nine-pie-pie/np-nt.git",
+  "author": "xucong <xuerzong@gmail.com>",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "module": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./constants": {
+      "import": "./dist/constants/index.js",
+      "types": "./dist/constants/index.d.ts"
+    },
+    "./server": {
+      "import": "./dist/server/index.js",
+      "types": "./dist/server/index.d.ts"
+    }
+  },
+  "files": [
+    "README.md",
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/node": "^18.15.10",
+    "@types/react": "^18.0.30",
+    "@types/react-dom": "^18.0.11",
+    "esbuild": "^0.17.14",
+    "fast-glob": "^3.2.12",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "next": "^13.1.6",
+    "npm-run-all": "^4.1.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^4.4.1",
+    "rome": "^11.0.0",
+    "typescript": "^4.9.5"
+  },
+  "peerDependencies": {
+    "next": "^12 || ^13",
+    "react": "^17 || ^18",
+    "react-dom": "^17 || ^18"
+  },
+  "scripts": {
+    "build": "npm-run-all clean build:*",
+    "build:ts": "node ./scripts/build.js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "clean": "rimraf ./dist",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": "rome format --write"
+  }
+}
