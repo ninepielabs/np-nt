@@ -1,26 +1,12 @@
 {
   "name": "np-nt",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "repository": "https://github.com/nine-pie-pie/np-nt.git",
   "author": "xucong <xuerzong@gmail.com>",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "module": "dist/index.js",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    },
-    "./constants": {
-      "import": "./dist/constants/index.js",
-      "types": "./dist/constants/index.d.ts"
-    },
-    "./server": {
-      "import": "./dist/server/index.js",
-      "types": "./dist/server/index.d.ts"
-    }
-  },
   "files": [
     "README.md",
     "dist"
